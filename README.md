@@ -11,8 +11,8 @@ A Java-based YouTube video downloader with a modern GUI that supports downloadin
 - **Standalone Dependencies**: No need to install Python or system-wide tools
 - **Perfect Merging**: Automatic video/audio merging with metadata
 
-## Checkout releases for easier Download
 
+## Checkout releases for easier Download
 
 ## Quick Start
 
